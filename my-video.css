@@ -1,0 +1,7 @@
+.video-js .vjs-time-control{
+    display: block;
+}
+.vjs-time-control.vjs-time-divider{
+    padding: 0;
+    min-width: auto;
+}

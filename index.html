@@ -3,6 +3,8 @@
   
     <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
     <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <!-- 本ページ用のカスタムCSS -->
+    <link rel="stylesheet" type="text/css" href="my-video.css">
   </head>
   
   <body>
@@ -13,7 +15,6 @@
       preload="auto"
       width="640"
       height="264"
-      data-setup="{}"
     >
     <source
     src="stream/playlist.m3u8"
@@ -26,6 +27,17 @@
         >
       </p>
     </video>
-  <a href="https://dova-s.jp/bgm/play4616.html" target="_blank">音源</a>
+    <a href="https://dova-s.jp/bgm/play4616.html" target="_blank">音源</a>
     <script src="https://vjs.zencdn.net/7.6.6/video.js"></script>
+    <script>
+      videojs('my-video', {
+        controls: true,
+        playbackRates: [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        inactivityTimeout: 0,
+        controlBar: {
+          pictureInPictureToggle: false,
+          remainingTimeDisplay: false,
+        },
+      });
+    </script>
   </body>
